@@ -1,12 +1,12 @@
 import React from 'react';
 import { BRAND, createWhatsAppUrl } from '../data/brand';
-import { 
-  Sparkles, 
-  MapPin, 
-  Phone, 
-  MessageCircle, 
+import {
+  Sparkles,
+  MapPin,
+  Phone,
   ArrowUp
 } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 const InstagramIcon: React.FC<{ className?: string }> = ({ className = "w-4 h-4" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-emerald-600 flex items-center justify-center transition-colors text-white"
                 title="WhatsApp"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
               </a>
               <a
                 href={`tel:${BRAND.phone}`}

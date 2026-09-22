@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { 
-  Heart, 
-  Leaf, 
-  Sparkles, 
-  ShieldCheck, 
-  Flame, 
+import {
+  Heart,
+  Leaf,
+  Sparkles,
+  ShieldCheck,
+  Flame,
   Droplet,
-  CheckCircle2
+  CheckCircle2,
+  Apple
 } from 'lucide-react';
 
 export const HealthyChoice: React.FC = () => {
@@ -52,7 +53,7 @@ export const HealthyChoice: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-[#FAF8F5] relative overflow-hidden">
+    <section className="py-24 sm:py-32 bg-cream-100 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Two Pillar Statements: "No Added Sugar" & "A Bowl Full of Goodness" */}
@@ -67,8 +68,7 @@ export const HealthyChoice: React.FC = () => {
             </div>
 
             <h3 className="font-serif text-3xl sm:text-4xl font-bold leading-tight">
-              No Added Sugar. <br />
-              <span className="text-stone-300 font-light text-2xl sm:text-3xl">Ever.</span>
+              No Added Sugar. <span className="text-stone-300 font-light text-2xl sm:text-3xl">Ever.</span>
             </h3>
 
             <p className="text-sm text-stone-300 mt-4 leading-relaxed font-light">
@@ -85,8 +85,7 @@ export const HealthyChoice: React.FC = () => {
             </div>
 
             <h3 className="font-serif text-3xl sm:text-4xl font-bold leading-tight">
-              A Bowl Full <br />
-              <span className="text-amber-100 italic font-normal">Of Goodness.</span>
+              A Bowl Full <span className="text-amber-100 italic font-normal">Of Goodness.</span>
             </h3>
 
             <p className="text-sm text-white/90 mt-4 leading-relaxed">
@@ -108,7 +107,7 @@ export const HealthyChoice: React.FC = () => {
 
         {/* Four Animated Feature Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {pillars.map((item, index) => {
+          {pillars.map((item) => {
             const isHovered = hoveredCard === item.id;
 
             return (
@@ -133,9 +132,7 @@ export const HealthyChoice: React.FC = () => {
                       <Heart className="w-6 h-6 animate-pulse" style={{ color: item.accent }} />
                     )}
                     {item.iconType === 'fruit' && (
-                      <span className="text-2xl select-none group-hover:rotate-12 transition-transform duration-300">
-                        🍎
-                      </span>
+                      <Apple className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" style={{ color: item.accent }} />
                     )}
                     {item.iconType === 'sparkle' && (
                       <Sparkles className="w-6 h-6 animate-spin-slow" style={{ color: item.accent }} />
@@ -156,11 +153,6 @@ export const HealthyChoice: React.FC = () => {
                   <p className="text-xs text-stone-600 leading-relaxed font-normal">
                     {item.desc}
                   </p>
-                </div>
-
-                <div className="relative z-10 mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500 font-semibold">
-                  <span>Pillar 0{index + 1}</span>
-                  <span className="w-2 h-2 rounded-full" style={{ backgroundColor: item.accent }} />
                 </div>
               </div>
             );

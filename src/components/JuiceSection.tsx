@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { JUICES_LIST, JuiceProduct } from '../data/juices';
-import { 
-  Sparkles, 
-  Droplets, 
-  ArrowRight, 
-  Check, 
-  Flame, 
-  Heart, 
+import {
+  Sparkles,
+  Droplets,
+  ArrowRight,
+  Check,
+  Flame,
+  Heart,
   ShieldCheck,
-  CalendarCheck
+  CalendarCheck,
+  Leaf
 } from 'lucide-react';
 
 interface JuiceSectionProps {
@@ -36,8 +37,7 @@ export const JuiceSection: React.FC<JuiceSectionProps> = ({ onSelectJuice }) => 
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
 
           <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight">
-            Freshness, <br />
-            <span className="text-gradient-juice italic font-normal">Pressed.</span>
+            Freshness, <span className="text-gradient-juice italic font-normal">Pressed.</span>
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-rose-200/80 font-normal max-w-xl mx-auto">
@@ -52,7 +52,6 @@ export const JuiceSection: React.FC<JuiceSectionProps> = ({ onSelectJuice }) => 
         {/* 1. WELLNESS SIGNATURE JUICES (ABC, Carrot, Beetroot, Moringa) */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping" />
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-wide">
               Signature Daily Cold-Pressed Juices
             </h3>
@@ -76,7 +75,7 @@ export const JuiceSection: React.FC<JuiceSectionProps> = ({ onSelectJuice }) => 
                         src={`/juices/${juice.id}.jpg`}
                         alt={juice.name}
                         loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
 
@@ -139,7 +138,6 @@ export const JuiceSection: React.FC<JuiceSectionProps> = ({ onSelectJuice }) => 
         {/* 2. THERAPEUTIC GREENS & AYURVEDIC CLEANSES (Ash Gourd, Sorakaya, Keera) */}
         <div>
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-wide">
               Traditional Greens &amp; Gut-Cooling Elixirs
             </h3>
@@ -172,7 +170,7 @@ export const JuiceSection: React.FC<JuiceSectionProps> = ({ onSelectJuice }) => 
                         src={`/juices/${juice.id}.jpg`}
                         alt={juice.name}
                         loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
 
@@ -234,8 +232,9 @@ export const JuiceSection: React.FC<JuiceSectionProps> = ({ onSelectJuice }) => 
 
         {/* Bottom Cold-Pressed Promise */}
         <div className="mt-16 p-6 rounded-3xl bg-white/[0.04] border border-white/10 text-center max-w-2xl mx-auto text-xs text-rose-200/80">
-          <p className="font-semibold text-white mb-1">
-            🌿 Zero Sugar • Zero Water • Zero Additives
+          <p className="font-semibold text-white mb-1 flex items-center justify-center gap-1.5">
+            <Leaf className="w-4 h-4 text-emerald-400" />
+            <span>Zero Sugar • Zero Water • Zero Additives</span>
           </p>
           <p>
             Bottled immediately after cold extraction in sterile containers. Delivered cold right across Kukatpally and Kondapur.

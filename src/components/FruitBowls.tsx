@@ -15,7 +15,7 @@ export const FruitBowls: React.FC<FruitBowlsProps> = ({ onSelectBowl }) => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   return (
-    <section id="bowls" className="py-24 sm:py-32 bg-[#FAF8F5] relative overflow-hidden">
+    <section id="bowls" className="py-24 sm:py-32 bg-cream-100 relative overflow-hidden">
       {/* Soft Ambient Background Elements */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-emerald-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-rose-100/30 rounded-full blur-3xl pointer-events-none -z-10" />
@@ -108,7 +108,7 @@ export const FruitBowls: React.FC<FruitBowlsProps> = ({ onSelectBowl }) => {
                       src={`/bowls/${bowl.id}.jpg`}
                       alt={bowl.name}
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none" />
                     <div className="absolute bottom-2 right-2 text-[10px] font-bold text-white bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/20 shadow-sm">

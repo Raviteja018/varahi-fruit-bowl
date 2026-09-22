@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { RAGI_JAVA_DATA } from '../data/ragiJava';
-import { 
-  Sparkles, 
-  Sun, 
-  CheckCircle2, 
-  ArrowRight, 
-  ShieldCheck, 
-  Clock, 
+import {
+  Sparkles,
+  Sun,
+  CheckCircle2,
+  ArrowRight,
+  ShieldCheck,
+  Clock,
   Calendar,
-  Flame
+  Flame,
+  Wheat
 } from 'lucide-react';
 
 interface RagiJavaSectionProps {
@@ -19,9 +20,9 @@ export const RagiJavaSection: React.FC<RagiJavaSectionProps> = ({ onSubscribeRag
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section 
-      id="ragi-java" 
-      className="py-24 sm:py-32 bg-[#FAF3EC] relative overflow-hidden border-y border-[#E3D4C4]"
+    <section
+      id="ragi-java"
+      className="py-24 sm:py-32 bg-ragi-light relative overflow-hidden border-y border-[#E3D4C4]"
     >
       {/* Warm earthy terracotta & cream radial glows */}
       <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-[#E8DACB] rounded-full blur-3xl pointer-events-none -z-10" />
@@ -49,35 +50,35 @@ export const RagiJavaSection: React.FC<RagiJavaSectionProps> = ({ onSubscribeRag
               <div className="relative h-72 sm:h-80 flex items-center justify-center my-4">
                 
                 {/* Floating Ragi Grains (Micro-animation) */}
-                <div 
-                  className="absolute top-6 left-8 text-2xl transition-transform duration-700 select-none"
+                <div
+                  className="absolute top-6 left-8 transition-transform duration-700 select-none text-[#8D5832]"
                   style={{
                     transform: isHovered ? 'translate(-8px, -12px) rotate(-15deg) scale(1.15)' : 'none'
                   }}
                 >
-                  🌾
+                  <Wheat className="w-6 h-6" />
                 </div>
 
-                <div 
-                  className="absolute top-10 right-8 text-2xl transition-transform duration-700 select-none"
+                <div
+                  className="absolute top-10 right-8 transition-transform duration-700 select-none text-[#8D5832]"
                   style={{
                     transform: isHovered ? 'translate(8px, -10px) rotate(20deg) scale(1.15)' : 'none'
                   }}
                 >
-                  🌾
+                  <Wheat className="w-6 h-6" />
                 </div>
 
-                <div 
-                  className="absolute bottom-8 left-10 text-xl transition-transform duration-700 select-none"
+                <div
+                  className="absolute bottom-8 left-10 transition-transform duration-700 select-none text-[#8D5832]"
                   style={{
                     transform: isHovered ? 'translate(-6px, 8px) rotate(10deg)' : 'none'
                   }}
                 >
-                  🌾
+                  <Wheat className="w-5 h-5" />
                 </div>
 
                 {/* Artisanal Terracotta Kulhad Real Photography */}
-                <div className="relative w-full h-72 sm:h-80 max-w-sm mx-auto rounded-3xl overflow-hidden shadow-2xl border-2 border-[#8A6145]/40 bg-[#382315]/10 group-hover:scale-103 transition-transform duration-700">
+                <div className="relative w-full h-72 sm:h-80 max-w-sm mx-auto rounded-3xl overflow-hidden shadow-2xl border-2 border-[#8A6145]/40 bg-[#382315]/10 group-hover:scale-[1.03] transition-transform duration-700">
                   <img 
                     src="/ragi-java.jpg" 
                     alt="Traditional Varahi Ragi Java in Terracotta Kulhad"
@@ -111,8 +112,7 @@ export const RagiJavaSection: React.FC<RagiJavaSectionProps> = ({ onSubscribeRag
             
 
             <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#2B1B10] leading-tight mb-4">
-              Start Your Morning <br />
-              <span className="text-[#8D5832] italic font-normal">The Traditional Way.</span>
+              Start Your Morning <span className="text-[#8D5832] italic font-normal">The Traditional Way.</span>
             </h2>
 
             <p className="text-base sm:text-lg text-[#553C2A] font-normal leading-relaxed mb-6">

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { FRUIT_BOWLS } from '../data/bowls';
 import { BRAND, createWhatsAppUrl } from '../data/brand';
-import { 
-  Sparkles, 
-  MessageCircle, 
-  ArrowRight, 
-  CheckCircle2, 
-  ShieldCheck, 
-  Truck, 
+import {
+  Sparkles,
+  ArrowRight,
+  CheckCircle2,
+  ShieldCheck,
+  Truck,
   Calendar
 } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 interface SubscriptionCTAProps {
   onStartSubscription: (planName: string) => void;
@@ -37,8 +37,7 @@ export const SubscriptionCTA: React.FC<SubscriptionCTAProps> = ({ onStartSubscri
             <div className="lg:col-span-7">
 
               <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] mb-6">
-                Make Healthy Eating <br />
-                <span className="text-gradient-fresh italic font-normal">A Daily Habit.</span>
+                Make Healthy Eating <span className="text-gradient-fresh italic font-normal">A Daily Habit.</span>
               </h2>
 
               <p className="text-base sm:text-lg text-stone-300 font-normal leading-relaxed mb-8 max-w-xl">
@@ -135,7 +134,7 @@ export const SubscriptionCTA: React.FC<SubscriptionCTAProps> = ({ onStartSubscri
                     </div>
                     <div className="flex items-center justify-between text-xs text-stone-300">
                       <span>Delivery Window:</span>
-                      <span className="font-bold text-emerald-400">7:00 AM – 9:00 AM</span>
+                      <span className="font-bold text-emerald-400">7:00 AM - 9:00 AM</span>
                     </div>
                     <div className="flex items-center justify-between text-xs text-stone-300">
                       <span>Estimated daily cost:</span>
@@ -148,10 +147,10 @@ export const SubscriptionCTA: React.FC<SubscriptionCTAProps> = ({ onStartSubscri
                 <div className="space-y-3">
                   <button
                     onClick={() => onStartSubscription(selectedPlan.name)}
-                    className="w-full py-4 rounded-full bg-emerald-500 hover:bg-emerald-400 text-forest-950 font-bold text-base shadow-lg shadow-emerald-500/25 hover:shadow-xl active:scale-95 transition-all flex items-center justify-center gap-2"
+                    className="w-full py-4 rounded-full bg-gradient-to-r from-forest-900 via-emerald-800 to-forest-900 hover:brightness-110 text-white font-bold text-base shadow-lg shadow-emerald-950/40 hover:shadow-xl active:scale-95 transition-all flex items-center justify-center gap-2"
                   >
                     <span>Start My Subscription</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4 text-citrus-yellow" />
                   </button>
 
                   <a
@@ -160,7 +159,7 @@ export const SubscriptionCTA: React.FC<SubscriptionCTAProps> = ({ onStartSubscri
                     rel="noopener noreferrer"
                     className="w-full py-3.5 rounded-full bg-white/10 hover:bg-white/15 text-white font-semibold text-xs sm:text-sm border border-white/20 transition-all flex items-center justify-center gap-2 active:scale-95"
                   >
-                    <MessageCircle className="w-4 h-4 text-emerald-400" />
+                    <WhatsAppIcon className="w-4 h-4 text-emerald-400" />
                     <span>WhatsApp 7207288868</span>
                   </a>
                 </div>

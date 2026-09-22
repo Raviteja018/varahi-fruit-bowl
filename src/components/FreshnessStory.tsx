@@ -64,7 +64,7 @@ export const FreshnessStory: React.FC = () => {
       id: "doorstep",
       title: "Your Doorstep",
       location: "Kukatpally & Kondapur",
-      time: "7:00 AM – 9:00 AM",
+      time: "7:00 AM - 9:00 AM",
       description: "Delivered promptly right to your home, gated community, or office desk in Kukatpally and Kondapur so you start your day nourished, light, and energized.",
       highlights: ["Contactless morning delivery", "Dedicated subscription routes", "Guaranteed fresh temperature"],
       icon: Bike,
@@ -74,7 +74,7 @@ export const FreshnessStory: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-[#F8F5EE] relative overflow-hidden border-y border-forest-900/10">
+    <section className="py-24 sm:py-32 bg-cream-100 relative overflow-hidden border-y border-forest-900/10">
       {/* Decorative organic leaf ambient background */}
       <div className="absolute -top-12 right-0 w-80 h-80 bg-fresh-glow/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-12 left-0 w-80 h-80 bg-citrus-yellow/15 rounded-full blur-3xl pointer-events-none" />
@@ -85,8 +85,7 @@ export const FreshnessStory: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
 
           <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-forest-950 leading-tight">
-            From Nature <br />
-            <span className="text-emerald-700 italic font-normal">To Your Bowl.</span>
+            From Nature <span className="text-emerald-700 italic font-normal">To Your Bowl.</span>
           </h2>
 
           <p className="mt-5 text-base sm:text-lg text-stone-700 font-normal leading-relaxed">
@@ -122,7 +121,7 @@ export const FreshnessStory: React.FC = () => {
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-800">
-                        Step 0{idx + 1} • {step.time}
+                        {step.time}
                       </span>
                       {isSelected && (
                         <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700">
@@ -186,8 +185,7 @@ export const FreshnessStory: React.FC = () => {
               </div>
 
               {/* Bottom Nav indicators */}
-              <div className="flex items-center justify-between mt-8 pt-6 border-t border-stone-100 text-xs text-stone-500">
-                <span>Journey Phase {activeStep + 1} of 5</span>
+              <div className="flex items-center justify-center mt-8 pt-6 border-t border-stone-100 text-xs text-stone-500">
                 <div className="flex items-center gap-2">
                   {steps.map((_, i) => (
                     <button

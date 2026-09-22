@@ -1,6 +1,7 @@
 import React from 'react';
-import { MessageCircle, ShoppingBag, ArrowRight } from 'lucide-react';
+import { ShoppingBag } from 'lucide-react';
 import { BRAND, createWhatsAppUrl } from '../data/brand';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 interface MobileStickyBarProps {
   onOpenOrderModal: () => void;
@@ -17,8 +18,8 @@ export const MobileStickyBar: React.FC<MobileStickyBarProps> = ({ onOpenOrderMod
           rel="noopener noreferrer"
           className="flex-1 py-3 px-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all"
         >
-          <MessageCircle className="w-4 h-4 fill-current" />
-          <span>WhatsApp 7207288868</span>
+          <WhatsAppIcon className="w-4 h-4" />
+          <span>WhatsApp</span>
         </a>
 
         {/* Subscribe Button */}

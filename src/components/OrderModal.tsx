@@ -4,17 +4,17 @@ import { FRUIT_BOWLS } from '../data/bowls';
 import { JUICES_LIST } from '../data/juices';
 import { RAGI_JAVA_DATA } from '../data/ragiJava';
 import confetti from 'canvas-confetti';
-import { 
-  X, 
-  Sparkles, 
-  MessageCircle, 
-  CheckCircle2, 
-  MapPin, 
-  Calendar, 
+import {
+  X,
+  Sparkles,
+  CheckCircle2,
+  MapPin,
+  Calendar,
   ShieldCheck,
   ChevronRight,
   Send
 } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 interface OrderModalProps {
   isOpen: boolean;
@@ -178,25 +178,25 @@ export const OrderModal: React.FC<OrderModalProps> = ({
             >
               {selectedCategory === 'bowl' && (
                 <>
-                  <option value="Medium Fruit Bowl (₹2,399/mo)">Medium Fruit Bowl — ₹2,399/mo (7 Varieties)</option>
-                  <option value="Large Fruit Bowl (₹2,799/mo) [POPULAR]">Large Fruit Bowl — ₹2,799/mo (POPULAR)</option>
-                  <option value="Diabetic Bowl (₹3,799/mo)">Diabetic Bowl — ₹3,799/mo (Mindful Nutrition)</option>
+                  <option value="Medium Fruit Bowl (₹2,399/mo)">Medium Fruit Bowl - ₹2,399/mo (7 Varieties)</option>
+                  <option value="Large Fruit Bowl (₹2,799/mo) [POPULAR]">Large Fruit Bowl - ₹2,799/mo (POPULAR)</option>
+                  <option value="Diabetic Bowl (₹3,799/mo)">Diabetic Bowl - ₹3,799/mo (Mindful Nutrition)</option>
                 </>
               )}
               {selectedCategory === 'juice' && (
                 <>
-                  <option value="ABC Miracle Juice (₹2,499/mo)">ABC Juice (Apple+Beetroot+Carrot) — ₹2,499/mo</option>
-                  <option value="Pure Carrot Juice (₹1,999/mo)">Pure Carrot Juice — ₹1,999/mo</option>
-                  <option value="Vital Beetroot Juice (₹1,999/mo)">Vital Beetroot Juice — ₹1,999/mo</option>
-                  <option value="Moringa Supergreen Juice (₹1,999/mo)">Moringa Supergreen Juice — ₹1,999/mo</option>
-                  <option value="Ash Gourd Juice (₹1,599/mo)">Ash Gourd Juice — ₹1,599/mo</option>
-                  <option value="Sorakaya Juice (₹1,699/mo)">Sorakaya / Bottle Gourd — ₹1,699/mo</option>
-                  <option value="Keera Cucumber Juice (₹1,499/mo)">Keera Cucumber Juice — ₹1,499/mo</option>
+                  <option value="ABC Miracle Juice (₹2,499/mo)">ABC Juice (Apple+Beetroot+Carrot) - ₹2,499/mo</option>
+                  <option value="Pure Carrot Juice (₹1,999/mo)">Pure Carrot Juice - ₹1,999/mo</option>
+                  <option value="Vital Beetroot Juice (₹1,999/mo)">Vital Beetroot Juice - ₹1,999/mo</option>
+                  <option value="Moringa Supergreen Juice (₹1,999/mo)">Moringa Supergreen Juice - ₹1,999/mo</option>
+                  <option value="Ash Gourd Juice (₹1,599/mo)">Ash Gourd Juice - ₹1,599/mo</option>
+                  <option value="Sorakaya Juice (₹1,699/mo)">Sorakaya / Bottle Gourd - ₹1,699/mo</option>
+                  <option value="Keera Cucumber Juice (₹1,499/mo)">Keera Cucumber Juice - ₹1,499/mo</option>
                 </>
               )}
               {selectedCategory === 'ragi' && (
                 <option value="Traditional Ragi Java (₹899/mo - 25 Days)">
-                  Traditional Ragi Java — ₹899/month (25 Days Excl. Sun)
+                  Traditional Ragi Java - ₹899/month (25 Days Excl. Sun)
                 </option>
               )}
               {selectedCategory === 'event' && (
@@ -284,7 +284,7 @@ export const OrderModal: React.FC<OrderModalProps> = ({
               type="submit"
               className="w-full py-4 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base shadow-lg shadow-emerald-600/30 active:scale-95 transition-all flex items-center justify-center gap-2"
             >
-              <MessageCircle className="w-5 h-5 fill-current" />
+              <WhatsAppIcon className="w-5 h-5" />
               <span>Connect on WhatsApp (7207288868)</span>
             </button>
             <p className="text-[11px] text-stone-400 text-center mt-2">

@@ -46,7 +46,7 @@ export function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#FAF8F5] text-[#192E21] flex flex-col selection:bg-emerald-500 selection:text-white pb-16 lg:pb-0">
+    <div className="relative min-h-screen bg-cream-100 text-[#192E21] flex flex-col selection:bg-emerald-500 selection:text-white pb-16 lg:pb-0">
       
       {/* Sticky Navigation Bar */}
       <Navbar

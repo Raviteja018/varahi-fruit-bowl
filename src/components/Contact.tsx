@@ -1,10 +1,10 @@
 import React from 'react';
 import { BRAND, createWhatsAppUrl } from '../data/brand';
-import { 
-  Phone, 
-  MessageCircle, 
-  Sparkles, 
+import {
+  Phone,
+  Sparkles,
 } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 const InstagramIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -16,7 +16,7 @@ const InstagramIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5"
 
 export const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-24 sm:py-32 bg-[#F6F3EC] relative overflow-hidden border-t border-forest-900/10">
+    <section id="contact" className="py-24 sm:py-32 bg-cream-100 relative overflow-hidden border-t border-forest-900/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="max-w-4xl mx-auto rounded-[36px] bg-white p-8 sm:p-14 lg:p-16 border border-stone-200 shadow-xl text-center relative overflow-hidden">
@@ -25,11 +25,8 @@ export const Contact: React.FC = () => {
           <div className="absolute top-0 right-0 w-80 h-80 bg-fresh-glow/20 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-citrus/10 rounded-full blur-3xl pointer-events-none" />
 
-          {/* Section Tag */}
-
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-forest-950 leading-tight mb-4">
-            Let's Make Your Day <br />
-            <span className="text-emerald-700 italic font-normal">A Little Fresher.</span>
+            Let's Make Your Day A Little Fresher
           </h2>
 
           <p className="text-base sm:text-lg text-stone-600 max-w-xl mx-auto font-normal leading-relaxed mb-10">
@@ -53,7 +50,7 @@ export const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="px-8 py-3.5 rounded-full bg-emerald-600 text-white font-bold text-sm hover:bg-emerald-700 shadow-lg shadow-emerald-600/25 transition-all active:scale-95 flex items-center gap-2"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
+              <WhatsAppIcon className="w-4 h-4" />
               <span>WhatsApp Us</span>
             </a>
 

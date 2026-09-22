@@ -11,7 +11,7 @@ export interface ScrollHeroProps {
 
 export const Hero: React.FC<ScrollHeroProps> = ({
   headingLine1 = "Good Health",
-  subheading = "Freshly prepared fruit bowls, healthy juices and nourishing goodness — delivered to your doorstep.",
+  subheading = "Freshly prepared fruit bowls, healthy juices and nourishing goodness, delivered to your doorstep.",
   onOpenOrderModal,
 }) => {
   const textRef = useRef<HTMLDivElement>(null);

@@ -42,7 +42,7 @@ export const WhyVarahi: React.FC = () => {
       subtitle: "Tailored Sizing & Mixes",
       desc: "Whether you need high-protein bowls with sprouted pulses, exotic fruit platters for an office meeting, or pure cold-pressed detox juices, we personalize portion sizes and ingredients to your preferences.",
       icon: Layers,
-      color: "#8B5CF6"
+      color: "#C2410C"
     },
     {
       step: "05",
@@ -55,7 +55,7 @@ export const WhyVarahi: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-[#FAF8F5] relative overflow-hidden">
+    <section className="py-24 sm:py-32 bg-cream-100 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -63,8 +63,7 @@ export const WhyVarahi: React.FC = () => {
 
 
           <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-forest-950 leading-tight">
-            Why Choose <br />
-            <span className="text-emerald-700 italic font-normal">Varahi?</span>
+            Why Choose <span className="text-emerald-700 italic font-normal">Varahi?</span>
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-stone-700 font-normal">
@@ -102,12 +101,8 @@ export const WhyVarahi: React.FC = () => {
                   <div className="pl-12 sm:pl-0 sm:w-1/2">
                     <div className="bg-white p-7 sm:p-8 rounded-3xl border border-stone-200/80 shadow-md hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                       
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="text-xs font-bold font-serif text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-200">
-                          Phase {pt.step}
-                        </span>
-
-                        <div 
+                      <div className="flex items-center justify-end mb-3">
+                        <div
                           className="w-8 h-8 rounded-xl flex items-center justify-center text-white"
                           style={{ backgroundColor: pt.color }}
                         >

@@ -104,7 +104,7 @@ export const FRUIT_BOWLS: FruitBowlPlan[] = [
       "Guava, green apples, berries & papaya",
       "Fresh crisp keera / cucumber & greens",
       "Protein-rich sprouts & organic chia/flax seeds",
-      "Strictly 100% natural — zero sweeteners"
+      "Strictly 100% natural, zero sweeteners"
     ],
     ctaText: "Choose Diabetic Bowl",
     featured: false,

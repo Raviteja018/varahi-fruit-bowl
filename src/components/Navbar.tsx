@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BRAND } from '../data/brand';
 import {
   Menu,
@@ -16,13 +16,17 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal, isHidden = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const scrollSentinelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 30);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    const sentinel = scrollSentinelRef.current;
+    if (!sentinel) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsScrolled(!entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -49,7 +53,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal, isHidden = fal
 
   return (
     <>
-      <header 
+      {/* Not fixed, so it scrolls with the page; toggles isScrolled once it leaves the viewport at 30px */}
+      <div ref={scrollSentinelRef} className="absolute top-[30px] left-0 w-px h-px pointer-events-none" aria-hidden="true" />
+      <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
           isHidden 
             ? '-translate-y-full opacity-0 pointer-events-none' 
@@ -154,7 +160,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal, isHidden = fal
           />
 
           {/* Drawer Menu */}
-          <div className="fixed right-0 top-0 bottom-0 w-4/5 max-w-sm bg-[#FAF8F5] shadow-2xl p-6 flex flex-col justify-between overflow-y-auto border-l border-forest-900/10">
+          <div className="fixed right-0 top-0 bottom-0 w-4/5 max-w-sm bg-cream-100 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto border-l border-forest-900/10">
             <div>
               {/* Header inside drawer */}
               <div className="flex items-center justify-between pb-5 border-b border-forest-900/10">
