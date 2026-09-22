@@ -21,7 +21,7 @@ export const SubscriptionCTA: React.FC<SubscriptionCTAProps> = ({ onStartSubscri
   const selectedPlan = FRUIT_BOWLS.find(b => b.id === selectedPlanId) || FRUIT_BOWLS[1];
 
   return (
-    <section id="subscriptions" className="py-24 sm:py-32 bg-forest-950 text-white relative overflow-hidden">
+    <section id="subscriptions" className="hidden lg:block py-24 sm:py-32 bg-forest-950 text-white relative overflow-hidden">
       {/* Dynamic Emerald & Gold Glows */}
       <div className="absolute top-0 right-10 w-[600px] h-[600px] bg-emerald-600/15 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 left-10 w-[600px] h-[600px] bg-citrus/15 rounded-full blur-[140px] pointer-events-none" />

@@ -12,6 +12,7 @@ import {
   Calendar,
   ShieldCheck,
   ChevronRight,
+  ChevronDown,
   Send
 } from 'lucide-react';
 import { WhatsAppIcon } from './icons/WhatsAppIcon';
@@ -171,11 +172,12 @@ export const OrderModal: React.FC<OrderModalProps> = ({
             <label className="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-1.5">
               Select Specific Item / Plan
             </label>
-            <select
-              value={selectedItem}
-              onChange={(e) => setSelectedItem(e.target.value)}
-              className="w-full px-4 py-3 rounded-2xl bg-stone-50 border border-stone-300 text-stone-900 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            >
+            <div className="relative">
+              <select
+                value={selectedItem}
+                onChange={(e) => setSelectedItem(e.target.value)}
+                className="w-full appearance-none pl-4 pr-10 py-3 rounded-2xl bg-stone-50 border border-stone-300 text-stone-900 text-sm font-semibold truncate focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              >
               {selectedCategory === 'bowl' && (
                 <>
                   <option value="Medium Fruit Bowl (₹2,399/mo)">Medium Fruit Bowl - ₹2,399/mo (7 Varieties)</option>
@@ -208,7 +210,9 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                   <option value="Custom Corporate Order">Custom Corporate Wellness Order</option>
                 </>
               )}
-            </select>
+              </select>
+              <ChevronDown className="w-4 h-4 text-stone-500 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+            </div>
           </div>
 
           {/* 3. Branch Selector */}
