@@ -96,12 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal, isHidden = fal
                   }`}>
                     FRUIT BOWL
                   </span>
-                  <span className="inline-block w-1 h-1 rounded-full bg-citrus"></span>
-                  <span className={`text-[9px] hidden sm:inline-block font-medium transition-colors ${
-                    isScrolled ? 'text-stone-700' : 'text-white/75'
-                  }`}>
-                    Hyderabad
-                  </span>
+
                 </div>
               </div>
             </a>
