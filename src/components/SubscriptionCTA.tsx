@@ -37,7 +37,8 @@ export const SubscriptionCTA: React.FC<SubscriptionCTAProps> = ({ onStartSubscri
             <div className="lg:col-span-7">
 
               <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] mb-6">
-                Make Healthy Eating <span className="text-gradient-fresh italic font-normal">A Daily Habit.</span>
+                Make Healthy Eating<br />
+                <span className="text-gradient-fresh italic font-normal">A Daily Habit.</span>
               </h2>
 
               <p className="text-base sm:text-lg text-stone-300 font-normal leading-relaxed mb-8 max-w-xl">
